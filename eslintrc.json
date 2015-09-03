@@ -1,0 +1,32 @@
+{
+  "extends": "eslint-config-airbnb",
+
+  "rules": {
+    "no-console": 2,
+    "react/jsx-quotes": [2, "single"],
+    "react/sort-comp": [2, {
+      "order": [
+        "displayName",
+        "propTypes",
+        "contextTypes",
+        "childContextTypes",
+        "mixins",
+        "statics",
+        "defaultProps",
+        "constructor",
+        "getDefaultProps",
+        "getInitialState",
+        "getChildContext",
+        "componentWillMount",
+        "componentDidMount",
+        "componentWillReceiveProps",
+        "shouldComponentUpdate",
+        "componentWillUpdate",
+        "componentDidUpdate",
+        "componentWillUnmount",
+        "render",
+        "/^_render.+$/"
+      ]
+    }]
+  }
+}

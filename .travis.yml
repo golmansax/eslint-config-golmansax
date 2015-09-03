@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js: '0.12'
+install:
+- NODE_ENV=development npm install
+script:
+- make eslint
+- npm test
+cache:
+  directories:
+  - node_modules

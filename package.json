@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-golmansax",
+  "description": "My personal eslint config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/golmansax/eslint-config-golmansax.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "devDependencies": {
+    "arrow-mocha": "*",
+    "babel": "*",
+    "chai": "*",
+    "chai": "*",
+    "eslint": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "babel-eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-react": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
