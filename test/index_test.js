@@ -8,8 +8,8 @@ const cli = new CLIEngine({
 });
 
 describe('index', () => {
-  it('is an object', () => {
-    expect(config).to.be.an('object');
+  it('contains rules', () => {
+    expect(config).to.include.keys('rules');
   });
 
   it('does not allow space in between function name and parens', () => {

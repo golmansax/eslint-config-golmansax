@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { CLIEngine } from 'eslint';
-import config from '../index';
+import config from '../react-native';
 
 const cli = new CLIEngine({
   useEslintrc: false,
@@ -8,8 +8,8 @@ const cli = new CLIEngine({
 });
 
 describe('react-native', () => {
-  it('is an object', () => {
-    expect(config).to.be.an('object');
+  it('contains rules', () => {
+    expect(config).to.include.keys('rules');
   });
 
   it('does not break when using let', () => {
@@ -30,6 +30,18 @@ describe('react-native', () => {
     const code =
       'function f() {\n' +
       '  const x = 5;\n' +
+      '  return x;\n' +
+      '}\n' +
+      'f();\n';
+
+    const report = cli.executeOnText(code);
+    expect(report.errorCount).to.equal(0);
+  });
+
+  it('does not break on object destructuring', () => {
+    const code =
+      'function f() {\n' +
+      '  var { x } = { x: 5 };\n' +
       '  return x;\n' +
       '}\n' +
       'f();\n';
