@@ -4,7 +4,7 @@ import config from '../react-native';
 
 const cli = new CLIEngine({
   useEslintrc: false,
-  configFile: 'configs/react_native.json',
+  configFile: 'configs/react-native.json',
 });
 
 describe('react-native', () => {

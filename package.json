@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-golmansax",
   "description": "My personal eslint config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "babel": "*",
     "chai": "*",
     "eslint": "*",
+    "eslint-config-golmansax": "file:.",
     "mocha": "*"
   },
   "dependencies": {

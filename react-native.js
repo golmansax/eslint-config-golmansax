@@ -1,1 +1,1 @@
-module.exports = require('./configs/react_native');
+module.exports = require('./configs/react-native');
