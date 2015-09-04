@@ -1,0 +1,7 @@
+{
+  "extends": "./index.json",
+
+  "rules": {
+    "no-var": 0
+  }
+}
