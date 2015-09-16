@@ -14,7 +14,6 @@ describe('index', () => {
 
   it('does not allow space in between function name and parens', () => {
     const report = cli.executeOnText('const f = function () {};\nf();\n');
-    console.log(report.results[0]);
     expect(report.errorCount).to.equal(1);
 
     const { ruleId } = report.results[0].messages.filter((message) => {
@@ -24,14 +23,14 @@ describe('index', () => {
   });
 
   it('enforces line length', () => {
-    let long_name = '';
+    let longString = '';
     for (let i = 0; i < 10; i++) {
-      long_name += 'abcedefghi';
+      longString += 'abcedefghi';
     }
 
     const code =
       'function f() {\n' +
-      `  return ${long_name};\n` +
+      `  return ${longString};\n` +
       '}\n' +
       'f();\n';
     const report = cli.executeOnText(code);
