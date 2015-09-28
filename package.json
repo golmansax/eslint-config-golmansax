@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-golmansax",
   "description": "My personal eslint config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,8 +16,8 @@
     "babel": "*",
     "babel-eslint": "*",
     "chai": "*",
-    "eslint": "< 1.4",
-    "eslint-config-airbnb": "*",
+    "eslint": ">= 1.4",
+    "eslint-config-airbnb": ">= 0.1.0",
     "eslint-config-golmansax": "file:.",
     "eslint-plugin-react": "*",
     "mocha": "*"

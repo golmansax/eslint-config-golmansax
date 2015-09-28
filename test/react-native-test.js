@@ -14,12 +14,12 @@ describe('react-native', () => {
 
   it('does not break when using let', () => {
     const code =
-      'function f() {\n' +
-      '  let x = 5;\n' +
-      '  x = 6;\n' +
-      '  return x;\n' +
+      'function func() {\n' +
+      '  let attr = 5;\n' +
+      '  attr = 6;\n' +
+      '  return attr;\n' +
       '}\n' +
-      'f();\n';
+      'func();\n';
 
     const report = cli.executeOnText(code);
     const messages = report.results[0].messages.map((data) => data.message);
@@ -28,11 +28,11 @@ describe('react-native', () => {
 
   it('does not break when using const', () => {
     const code =
-      'function f() {\n' +
-      '  const x = 5;\n' +
-      '  return x;\n' +
+      'function func() {\n' +
+      '  const attr = 5;\n' +
+      '  return attr;\n' +
       '}\n' +
-      'f();\n';
+      'func();\n';
 
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(0);
@@ -40,11 +40,11 @@ describe('react-native', () => {
 
   it('does not break on object destructuring', () => {
     const code =
-      'function f() {\n' +
-      '  var { x } = { x: 5 };\n' +
-      '  return x;\n' +
+      'function func() {\n' +
+      '  var { attr } = { attr: 5 };\n' +
+      '  return attr;\n' +
       '}\n' +
-      'f();\n';
+      'func();\n';
 
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(0);

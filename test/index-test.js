@@ -13,7 +13,7 @@ describe('index', () => {
   });
 
   it('does not allow space in between function name and parens', () => {
-    const report = cli.executeOnText('const f = function () {};\nf();\n');
+    const report = cli.executeOnText('const func = function () {};\nfunc();\n');
     expect(report.errorCount).to.equal(1);
 
     const { ruleId } = report.results[0].messages.filter((message) => {
@@ -29,10 +29,10 @@ describe('index', () => {
     }
 
     const code =
-      'function f() {\n' +
-      `  return ${longString};\n` +
+      'function func() {\n' +
+      `  return '${longString}';\n` +
       '}\n' +
-      'f();\n';
+      'func();\n';
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(1);
     expect(report.results[0].messages[0].ruleId).to.equal('max-len');
