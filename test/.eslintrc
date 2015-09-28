@@ -1,3 +1,7 @@
 {
-  "extends": "../index"
+  "extends": "golmansax",
+
+  "env": {
+    "mocha": true
+  }
 }
