@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'airbnb',
+    'golmansax/rules/best-practices',
     'golmansax/rules/errors',
     'golmansax/rules/legacy',
     'golmansax/rules/style',
