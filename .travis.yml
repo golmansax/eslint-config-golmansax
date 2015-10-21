@@ -1,11 +1,8 @@
 sudo: false
 language: node_js
 install:
-- npm prune
 - npm install
+- npm prune
 script:
 - make eslint
 - npm test
-cache:
-  directories:
-  - node_modules

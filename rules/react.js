@@ -1,5 +1,8 @@
 module.exports = {
   rules: {
+    'react/jsx-curly-spacing': 2,
+    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-sort-prop-types': 2,
     'react/sort-comp': [2, {
       order: [
         'displayName',
