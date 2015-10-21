@@ -37,4 +37,10 @@ describe('index', () => {
     expect(report.errorCount).to.equal(1);
     expect(report.results[0].messages[0].ruleId).to.equal('max-len');
   });
+
+  it('prefers parens for arrow functions', () => {
+    const report = cli.executeOnText('const func = blah => blah;\nfunc();\n');
+    expect(report.errorCount).to.equal(1);
+    expect(report.results[0].messages[0].ruleId).to.equal('arrow-parens');
+  });
 });
