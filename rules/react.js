@@ -21,8 +21,8 @@ module.exports = {
         'componentDidUpdate',
         'componentWillUnmount',
         'render',
-        '/^_render.+$/'
-      ]
+        '/^_render.+$/',
+      ],
     }],
   },
 };
