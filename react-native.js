@@ -1,1 +1,6 @@
-module.exports = require('./configs/react-native');
+module.exports = {
+  extends: [
+    'golmansax',
+    'golmansax/rules/react-native',
+  ],
+};

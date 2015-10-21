@@ -4,12 +4,16 @@ import config from '../react-native';
 
 const cli = new CLIEngine({
   useEslintrc: false,
-  configFile: 'configs/react-native.json',
+  configFile: 'react-native.js',
 });
 
 describe('react-native', () => {
-  it('contains rules', () => {
-    expect(config).to.include.keys('rules');
+  it('contains extends', () => {
+    expect(config).to.include.keys('extends');
+  });
+
+  it('does not contain rules', () => {
+    expect(config).not.to.include.keys('rules');
   });
 
   it('does not break when using let', () => {

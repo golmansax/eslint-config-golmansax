@@ -4,12 +4,16 @@ import config from '../index';
 
 const cli = new CLIEngine({
   useEslintrc: false,
-  configFile: 'configs/index.json',
+  configFile: 'index.js',
 });
 
 describe('index', () => {
-  it('contains rules', () => {
-    expect(config).to.include.keys('rules');
+  it('contains extends', () => {
+    expect(config).to.include.keys('extends');
+  });
+
+  it('does not contain rules', () => {
+    expect(config).not.to.include.keys('rules');
   });
 
   it('does not allow space in between function name and parens', () => {

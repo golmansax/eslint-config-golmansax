@@ -1,7 +1,0 @@
-{
-  "extends": "golmansax",
-
-  "rules": {
-    "no-var": 0
-  }
-}
