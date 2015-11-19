@@ -48,9 +48,9 @@ describe('index', () => {
     expect(report.results[0].messages[0].ruleId).to.equal('arrow-parens');
   });
 
-  it('handles destructuring', () => {
+  it.skip('handles destructuring', () => {
     const code =
-      'function func({ a, ...other }) {\n' +
+      'const func = ({ a, ...other }) => {\n' +
       `  return a + other.b;\n` +
       '}\n' +
       'func();\n';
