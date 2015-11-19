@@ -47,4 +47,14 @@ describe('index', () => {
     expect(report.errorCount).to.equal(1);
     expect(report.results[0].messages[0].ruleId).to.equal('arrow-parens');
   });
+
+  it('handles destructuring', () => {
+    const code =
+      'function func({ a, ...other }) {\n' +
+      `  return a + other.b;\n` +
+      '}\n' +
+      'func();\n';
+    const report = cli.executeOnText(code);
+    expect(report.errorCount).to.equal(0);
+  });
 });

@@ -1,6 +1,8 @@
 module.exports = {
   extends: 'airbnb/rules/es6',
 
+  parser: 'babel-eslint',
+
   rules: {
     'arrow-parens': 2,
     'arrow-spacing': 2,
