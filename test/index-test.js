@@ -57,4 +57,13 @@ describe('index', () => {
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(0);
   });
+
+  it('allows for multiple stateless react components', () => {
+    const code =
+      'const c1 = () => <div />;\n' +
+      'const c2 = () => <div />;\n' +
+      'c1();\nc2();\n';
+    const report = cli.executeOnText(code);
+    expect(report.errorCount).to.equal(0);
+  });
 });
