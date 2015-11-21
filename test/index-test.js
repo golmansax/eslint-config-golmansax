@@ -66,4 +66,16 @@ describe('index', () => {
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(0);
   });
+
+  it('uses one indent for switch statements', () => {
+    const code =
+      'const c1 = (x) => {\n' +
+      '  switch (x) {\n' +
+      '    default:\n' +
+      '  }\n' +
+      '};\n' +
+      'c1();\n';
+    const report = cli.executeOnText(code);
+    expect(report.errorCount).to.equal(0);
+  });
 });
