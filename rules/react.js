@@ -1,5 +1,9 @@
 module.exports = {
   rules: {
+    'react/jsx-closing-bracket-location': [2, {
+      nonEmpty: 'props-aligned',
+      selfClosing: 'line-aligned',
+    }],
     'react/jsx-curly-spacing': 2,
     'react/jsx-no-duplicate-props': 2,
     'react/jsx-sort-prop-types': 2,
