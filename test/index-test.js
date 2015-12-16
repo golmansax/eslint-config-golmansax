@@ -16,8 +16,8 @@ describe('index', () => {
     expect(config).not.to.include.keys('rules');
   });
 
-  it('does not allow space in between function name and parens', () => {
-    const report = cli.executeOnText('const func = function () {};\nfunc();\n');
+  it('forces space in between function name and parens', () => {
+    const report = cli.executeOnText('const func = function() {};\nfunc();\n');
     expect(report.errorCount).to.equal(1);
 
     const { ruleId } = report.results[0].messages.filter((message) => {
