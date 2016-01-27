@@ -78,4 +78,13 @@ describe('index', () => {
     const report = cli.executeOnText(code);
     expect(report.errorCount).to.equal(0);
   });
+
+  // This test case is dependent on switch to eslint 2.0
+  it.skip('throws an error for window being a global', () => {
+    const code =
+      'const c1 = () => window;\n' +
+      'c1();\n';
+    const report = cli.executeOnText(code);
+    expect(report.errorCount).to.equal(1);
+  });
 });

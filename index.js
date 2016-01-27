@@ -8,4 +8,7 @@ module.exports = {
     'golmansax/rules/es6',
     'golmansax/rules/react',
   ],
+  env: {
+    browser: false,
+  },
 };
