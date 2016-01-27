@@ -24,6 +24,12 @@
     "eslint-plugin-react": "*",
     "mocha": "*"
   },
+  "peerDependencies": {
+    "babel-eslint": "*",
+    "eslint": ">= 1.4",
+    "eslint-config-airbnb": ">= 0.1.0",
+    "eslint-plugin-react": "*"
+  },
   "scripts": {
     "test": "make test"
   }
