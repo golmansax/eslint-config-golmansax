@@ -20,9 +20,9 @@ describe('index', () => {
     const report = cli.executeOnText('const func = function() {};\nfunc();\n');
     expect(report.errorCount).to.equal(1);
 
-    const { ruleId } = report.results[0].messages.filter((message) => {
-      return message.severity === 2;
-    })[0];
+    const { ruleId } = report.results[0].messages.filter((message) => (
+      message.severity === 2
+    ))[0];
     expect(ruleId).to.equal('space-before-function-paren');
   });
 
