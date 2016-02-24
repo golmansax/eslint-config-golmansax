@@ -1,3 +1,4 @@
+import { describe, it } from 'global-mocha';
 import { expect } from 'chai';
 import { CLIEngine } from 'eslint';
 import config from '../react-native';

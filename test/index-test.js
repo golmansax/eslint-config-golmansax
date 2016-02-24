@@ -1,3 +1,4 @@
+import { describe, it } from 'global-mocha';
 import { expect } from 'chai';
 import { CLIEngine } from 'eslint';
 import config from '../index';
@@ -79,8 +80,7 @@ describe('index', () => {
     expect(report.errorCount).to.equal(0);
   });
 
-  // This test case is dependent on switch to eslint 2.0
-  it.skip('throws an error for window being a global', () => {
+  it('throws an error for window being a global', () => {
     const code =
       'const c1 = () => window;\n' +
       'c1();\n';
