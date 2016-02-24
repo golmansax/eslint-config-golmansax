@@ -6,7 +6,7 @@ module.exports = {
     }],
     'react/jsx-curly-spacing': 2,
     'react/jsx-no-duplicate-props': 2,
-    'react/jsx-sort-prop-types': 2,
+    'react/sort-prop-types': 2,
     'react/no-multi-comp': [2, { ignoreStateless: true }],
     'react/react-in-jsx-scope': 0,
     'react/sort-comp': [2, {
