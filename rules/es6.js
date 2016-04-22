@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'airbnb/rules/es6',
+  extends: 'airbnb-base/rules/es6',
 
   parser: 'babel-eslint',
 
