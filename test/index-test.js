@@ -29,7 +29,7 @@ describe('index', () => {
 
   it('enforces line length', () => {
     let longString = '';
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 10; index += 1) {
       longString += 'abcedefghi';
     }
 

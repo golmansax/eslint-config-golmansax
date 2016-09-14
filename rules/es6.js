@@ -4,7 +4,7 @@ module.exports = {
   parser: 'babel-eslint',
 
   rules: {
-    'arrow-parens': 2,
+    'arrow-parens': [2, 'always'],
     'arrow-spacing': 2,
     'constructor-super': 2,
     'generator-star-spacing': 2,
