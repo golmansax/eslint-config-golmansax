@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'golmansax/base',
+    'golmansax',
     'golmansax/rules/react-native',
   ],
 };

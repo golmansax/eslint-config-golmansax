@@ -46,7 +46,7 @@ describe('react-native', () => {
   it('does not break on object destructuring', () => {
     const code =
       'function func() {\n' +
-      '  var { attr } = { attr: 5 };\n' +
+      '  const { attr } = { attr: 5 };\n' +
       '  return attr;\n' +
       '}\n' +
       'func();\n';
