@@ -11,7 +11,9 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/sort-comp': [2, {
       order: [
+        'static-methods',
         'lifecycle',
+        'setNativeProps',
         'render',
         '/^_render.+$/',
       ],
