@@ -52,7 +52,7 @@ describe('index', () => {
   it.skip('handles destructuring', () => {
     const code =
       'const func = ({ a, ...other }) => {\n' +
-      `  return a + other.b;\n` +
+      '  return a + other.b;\n' +
       '}\n' +
       'func();\n';
     const report = cli.executeOnText(code);
