@@ -5,6 +5,7 @@ module.exports = {
       selfClosing: 'line-aligned',
     }],
     'react/jsx-curly-spacing': 2,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-no-duplicate-props': 2,
     'react/sort-prop-types': 2,
     'react/no-multi-comp': [2, { ignoreStateless: true }],
