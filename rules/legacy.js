@@ -1,5 +1,5 @@
 module.exports = {
   rules: {
-    'max-len': [2, 80],
+    'max-len': [2, 100],
   },
 };
